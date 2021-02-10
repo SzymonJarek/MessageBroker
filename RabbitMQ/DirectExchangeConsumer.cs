@@ -6,22 +6,23 @@ using RabbitMQ.Client.Events;
 
 namespace RabbitMQ
 {
-    public class Consumer
+    public class DirectExchangeConsumer
     {
-        public void CreateConsumer(string queueName)
+        public void Consume(IModel channel)
         {
-            var factory = new ConnectionFactory()
-            {
-                Uri = new Uri("amqp://guest:guest@localhost:5672")
-            };
-            using var connection = factory.CreateConnection();
-            using var channel = connection.CreateModel();
-            channel.QueueDeclare(queueName,
+            channel.ExchangeDeclare("Exchange_Queue",ExchangeType.Direct);
+            channel.QueueDeclare("Direct-Queue",
                 durable: true,
                 exclusive: false,
                 autoDelete: false,
                 arguments: null);
+
+            channel.QueueBind("Direct-Queue","Exchange_Queue","account.init");
             
+            //fetch 10 messages at a time
+            channel.BasicQos(0, 10, false);
+
+
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += (sender, e) =>
             {
@@ -30,8 +31,7 @@ namespace RabbitMQ
                 Console.WriteLine(message);
             };
 
-            channel.BasicConsume(queueName, true, consumer);
-
+            channel.BasicConsume("Direct-Queue", true, consumer);
         }
     }
 }

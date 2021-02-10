@@ -1,4 +1,5 @@
 ﻿using System;
+using RabbitMQ;
 
 namespace Consumer
 {
@@ -6,8 +7,10 @@ namespace Consumer
     {
         static void Main(string[] args)
         {
-            var consumer = new RabbitMQ.Consumer();
-            consumer.CreateConsumer("Primary-Queue");
+            var channel = new RabbitMQ.ConnectorInit().Init();
+            var consumer = new DirectExchangeConsumer();
+            consumer.Consume(channel);
+            
             Console.ReadLine();
         }
     }

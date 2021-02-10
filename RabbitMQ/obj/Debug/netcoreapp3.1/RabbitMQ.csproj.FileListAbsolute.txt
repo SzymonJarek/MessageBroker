@@ -7,3 +7,12 @@ C:\Users\SzymonJ\source\tests\Micro\Producer\RabbitMQ\obj\Debug\netcoreapp3.1\Ra
 C:\Users\SzymonJ\source\tests\Micro\Producer\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.csproj.CoreCompileInputs.cache
 C:\Users\SzymonJ\source\tests\Micro\Producer\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.dll
 C:\Users\SzymonJ\source\tests\Micro\Producer\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.pdb
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\bin\Debug\netcoreapp3.1\RabbitMQ.deps.json
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\bin\Debug\netcoreapp3.1\RabbitMQ.dll
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\bin\Debug\netcoreapp3.1\RabbitMQ.pdb
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.csprojAssemblyReference.cache
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.AssemblyInfoInputs.cache
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.AssemblyInfo.cs
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.csproj.CoreCompileInputs.cache
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.dll
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\RabbitMQ\obj\Debug\netcoreapp3.1\RabbitMQ.pdb
