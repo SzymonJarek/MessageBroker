@@ -15,8 +15,11 @@ namespace Producer
             //var queueProducer = new QueueProducer();
             //queueProducer.SendMessage(channel);
             //direct exchange 
-            var directExchange = new DirectExchangePublisher();
-            directExchange.Publish(channel);
+            //var exchange = new DirectExchangePublisher();
+            //var exchange = new TopicExchangePublisher();
+            //var exchange = new HeaderExchangePublisher();
+            var exchange = new FanoutExchangePublisher();
+            exchange.Publish(channel);
 
             Console.ReadLine();
         }
