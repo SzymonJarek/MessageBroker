@@ -1,0 +1,9 @@
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\bin\Debug\netcoreapp3.1\Kafka.deps.json
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\bin\Debug\netcoreapp3.1\Kafka.dll
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\bin\Debug\netcoreapp3.1\Kafka.pdb
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\obj\Debug\netcoreapp3.1\Kafka.csprojAssemblyReference.cache
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\obj\Debug\netcoreapp3.1\Kafka.AssemblyInfoInputs.cache
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\obj\Debug\netcoreapp3.1\Kafka.AssemblyInfo.cs
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\obj\Debug\netcoreapp3.1\Kafka.csproj.CoreCompileInputs.cache
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\obj\Debug\netcoreapp3.1\Kafka.dll
+C:\Users\SzymonJ\source\tests\Micro\MessageBroker\Kafka\obj\Debug\netcoreapp3.1\Kafka.pdb
