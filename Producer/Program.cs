@@ -3,7 +3,7 @@ using System.Collections;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ;
-
+using Serilog;
 
 namespace Producer
 {
@@ -17,13 +17,26 @@ namespace Producer
             Console.ReadLine();
         }
 
-        private static void Kafka(string [] args)
+        private static void Kafka(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
         }
 
         private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+            .UseSerilog((context, configuration) =>
+            {
+                configuration.Enrich.FromLogContext()
+                        .Enrich.WithMachineName()
+                        .WriteTo.Console()
+                        .WriteTo.Elasticsearch(new Serilog.Sinks.Elasticsearch.ElasticsearchSinkOptions(new Uri("localhost:9200"))
+                        {
+                            IndexFormat = $"Thats whats in LOG",
+                            AutoRegisterTemplate = true,
+                            NumberOfShards = 2,
+                            NumberOfReplicas = 1
+                        }).ReadFrom.Configuration(context.Configuration);
+            })
             .ConfigureServices((context, collection) =>
             {
                 collection.AddHostedService<Kafka.StreamProducerHostedService>();
